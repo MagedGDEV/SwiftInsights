@@ -22,7 +22,7 @@ var myName = "Maged Elesseily"
 ```
 
 - **`=`**: The assignment operator that stores the value in the variable.
-- **`" "`**: Double quotes indicate a string value (explained later in this branch).
+- **`" "`**: Double quotes indicate a string value ([**explained later in this branch**](https://github.com/MagedGDEV/SwiftInsights/tree/variables#strings)).
 
 After this code, the variable **`myName`** holds the value **`"Maged Elesseily"`**.
 
@@ -190,3 +190,5 @@ In some cases, you will want to check the value stored in a variable or returned
 - **`.count`** is a property that provides information (length of the string). It doesn’t require parentheses.
 - **`.uppercased()`** is a method that performs an action (converts to uppercase). It requires parentheses to execute.
 This distinction will be discussed further as you explore Swift.
+
+There are many string operations available in Swift, which we will explore in more detail in future branches and applications.
