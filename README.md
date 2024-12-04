@@ -268,3 +268,67 @@ print(100.isMultiple(of: 3)) // Output: false
 ```
 
 This method simplifies common tasks, making your code more readable and efficient.
+
+## Doubles
+
+Swift allows you to store floating-point numbers, or doubles, which can represent both very large and very small decimal values (e.g., **`0.000000001`**). These numbers are treated differently from integers to ensure **type safety**.
+
+**Example:**
+
+```swift
+let a = 1
+let b = 2.0    // b is a double
+let c = a + b  // Error: Cannot add integer and double directly
+```
+
+In Swift, you cannot directly mix integers and doubles. To fix this, you can either:
+
+1. **Convert the integer to a double:**
+
+    ```swift
+    let c = Double(a) + b  // a is now treated as a double
+    ```
+
+2. **Convert the double to an integer:**
+
+    ```swift
+    let c = a + Int(b)  // b is now treated as an integer
+    ```
+
+>[!NOTE]
+> Swift decides whether a number is treated as an **integer** or **double** based on whether it contains a decimal point. For example, **`1.0`** is treated as a double because it has a decimal point, even though the value might be the same as an integer **`1`**.
+
+### Arithmetic and Compound Assignment
+
+Doubles can be used with arithmetic operations (**`+`**, **`-`**, **`*`**, **`/`**) and compound assignments (**`+=`**, **`-=`**, **`*=`**, **`/=`**) just like integers.
+
+```swift
+var result = 10.5
+result += 2.5  // result is now 13.0
+```
+
+### Precision in Doubles
+
+Doubles, due to their floating-point nature, are not always 100% accurate. Since they are represented in binary, some decimal numbers cannot be exactly represented.
+
+For example:
+
+```swift
+let a = 0.1
+let b = 0.2
+let c = a + b
+print(c)  // Output: 0.30000000000000004
+```
+
+This small inaccuracy arises from the way numbers are stored in binary. **While it is usually negligible**, it can cause issues in **precise calculations**.
+
+## Type Safety
+
+Swift enforces **type safety**, meaning once a variable is assigned a value of a specific type, it must always hold that same type. For example:
+
+```swift
+var name = "Maged"  // name is a String
+name = 10  // Error: Cannot assign an Int to a String variable
+```
+
+This helps prevent unexpected behavior in your code by ensuring that variables are always used with the correct data type.
