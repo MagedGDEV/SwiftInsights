@@ -181,7 +181,7 @@ let emojiText = "Coding is fun 😎"  // Emojis are valid in strings
     print(lowercase.uppercased())  // Output: "HELLO"
     ```
 
-#### You might be wondering, what is the print() function?
+#### You might be wondering, what is the `print()` function?
 
 In some cases, you will want to check the value stored in a variable or returned by a function. This is where the **`print()`** function becomes incredibly useful. It outputs the value to the console or terminal, allowing you to see what's happening in your program. This makes it an essential tool for debugging and understanding your code's behavior.
 
@@ -192,3 +192,79 @@ In some cases, you will want to check the value stored in a variable or returned
 This distinction will be discussed further as you explore Swift.
 
 There are many string operations available in Swift, which we will explore in more detail in future branches and applications.
+
+## Integers
+
+In Swift, just like storing strings, you can store whole numbers, which are known as **integers**. Integers can be both positive and negative and have a vast range in Swift.
+
+### Declaring, Initializing, and Updating Integers
+
+Declaring and initializing integers works just like strings, and you can also update their value if they are mutable:
+
+```swift
+var score = 10   // Declare and initialize
+score = 20       // Update the value
+print(score)     // Output: 20
+```
+
+If the value should not change, use let to create a constant:
+
+```swift
+let highScore = 100  // Immutable constant
+```
+
+#### Writing Large Numbers
+
+Large numbers can be difficult to read, so Swift allows you to use underscores (_) to make them more readable. These underscores are purely for visual clarity and do not affect the actual value of the number. Swift completely ignores them when interpreting the value:
+
+```swift
+let bigInt = 100_000_000  // Easier to read than 100000000
+```
+
+However, improper use of underscores can lead to confusion. For example:
+
+```swift
+let confusingNumber = 10__00_00  // Still valid
+print(confusingNumber)           // Output: 100000
+```
+
+Even though this syntax is allowed, it can make your code harder to understand. Always use underscores consistently and sparingly to enhance readability.
+
+### Performing Basic Arithmetic
+
+Swift allows you to perform standard arithmetic operations, just like you learned in school:
+
+```swift
+let a = 10
+let b = 5
+
+let addition = a + b      // 15
+let subtraction = a - b   // 5
+let multiplication = a * b // 50
+let division = a / b      // 2
+```
+
+#### Compound Assignment
+
+You can simplify arithmetic operations by combining them with assignment using compound operators:
+
+```swift
+var number = 10
+
+number += 5   // Adds 5 to number: now 15 similar to number = number + 5
+number -= 3   // Subtracts 3: now 12
+number *= 2   // Multiplies by 2: now 24
+number /= 4   // Divides by 4: now 6
+```
+
+### Additional Integer Operations
+
+Swift also provides helpful methods for integers. For example, checking if a number is a multiple of another:
+
+```swift
+let number = 9
+print(number.isMultiple(of: 3))  // Output: true
+print(100.isMultiple(of: 3)) // Output: false
+```
+
+This method simplifies common tasks, making your code more readable and efficient.
